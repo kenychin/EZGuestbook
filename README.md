@@ -19,6 +19,8 @@ Super easy guestbook, started by win, modified by masterk.
 * Cookies enabled after submission
 
 ### To Do List
+* Display
+  * Time am/pm
 * Validate comments
    * reduce comments to 4000(?) length
 * Admin panel
