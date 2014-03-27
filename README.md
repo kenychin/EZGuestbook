@@ -6,7 +6,7 @@ Super easy guestbook, started by win, modified by masterk.
 -----
 
 
-## Main Programs Directory
+## Main Programs List
 
 ### index.php
 Main page of the guestbook
