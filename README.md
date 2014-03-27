@@ -6,7 +6,7 @@ Super easy guestbook, started by win, modified by masterk.
 -----
 
 
-##　File Directory
+## File Directory
 
 ### index.php
 Main page of the guestbook
