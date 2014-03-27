@@ -28,7 +28,7 @@
 	<div class="main">
 		<form action="write.php" method="post" class="write_form">
 			<?php if ($URL['id']) { ?>
-				<p>回覆留言: &nbsp; &nbsp;
+				<p>留言編號: &nbsp; &nbsp;
 				<input type="text" name="r_id" value="<?=$URL['id']?>" size="1" readonly>
 			<?php } ?>
 			<p>姓名: &nbsp; &nbsp;
