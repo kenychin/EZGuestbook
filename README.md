@@ -20,6 +20,7 @@ Super easy guestbook, started by win, modified by masterk.
 * Reply to comments
    * display in indented format
 * Admin panel
+   * Login, cookie enabled
    * Modify comments
    * Delete comments
 
