@@ -23,7 +23,7 @@ Super easy guestbook, started by win, modified by masterk.
    * add parent field in DB
    * display indented
 * Admin panel
-   * Login, cookie enabled
+   * Login, session enabled
    * Modify comments
    * Delete comments
 
