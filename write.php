@@ -1,3 +1,11 @@
+<?php
+	// Write COOKIE
+	$expire=time()+60*60*24*60;
+	setcookie("name", $_POST["name"], $expire);
+	setcookie("url", $_POST["url"], $expire);
+	setcookie("email", $_POST["email"], $expire);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +15,7 @@
 </head>
 
 <?php
+$r_id = $_POST["r_id"];
 $name = $_POST["name"];
 $url = $_POST["url"];
 $email = $_POST["email"];
@@ -26,7 +35,7 @@ $Entry = mysql_fetch_array($result);
 if ($_POST["content"] === $Entry['content']) { $validate = 0; $msg = "請勿重複留言";}
 
 if ($validate) {
-	$query = "INSERT INTO messages (name,url,email,content,time,ip) VALUES ('$name','$url','$email','$content','$time','$ip')";
+	$query = "INSERT INTO messages (r_id,name,url,email,content,time,ip) VALUES ('$r_id','$name','$url','$email','$content','$time','$ip')";
 	mysql_query($query); 
 
 	$msg = "謝謝您的留言";
