@@ -20,7 +20,8 @@ Super easy guestbook, started by win, modified by masterk.
 * Validate comments
    * reduce comments to 4000(?) length
 * Reply to comments
-   * display in indented format
+   * add parent field in DB
+   * display indented
 * Admin panel
    * Login, cookie enabled
    * Modify comments
