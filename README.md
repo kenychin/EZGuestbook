@@ -18,7 +18,7 @@ Super easy guestbook, started by win, modified by masterk.
 
 ### To Do List
 * Validate comments
-   * reduce comments to 4000? length
+   * reduce comments to 4000(?) length
 * Reply to comments
    * display in indented format
 * Admin panel
