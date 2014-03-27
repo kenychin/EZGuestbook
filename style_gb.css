@@ -2,36 +2,34 @@
 html {
 	margin: 0;
 	padding: 0;
-	}
+}
 body { 
 	font: 80% georgia, sans-serif;
 	line-height: 1.88889;
 	color: #555753; 
 	margin: 0; 
 	padding: 0;
-	}
+}
 p {
 	font: 120% georgia, sans-serif;
 	margin-top: 0; 
 	text-align: justify;
-	}
+}
 h3 {
 	font: italic normal 1.4em georgia, sans-serif;
 	letter-spacing: 1px; 
 	margin-bottom: 0; 
 	color: #7D775C;
-
-	clear: both;
-	}
+}
 a:link, a:visited { 
 	font-weight: bold; 
 	text-decoration: none;
 	color: #56458A;
-	}
+}
 a:hover, a:focus, a:active { 
 	text-decoration: underline; 
 	color: #9685BA;
-	}
+}
 
 /* specific divs */
 .page-wrapper { 
@@ -53,12 +51,21 @@ a:hover, a:focus, a:active {
 	border:2px solid;
 	border-radius:25px;
 }
+.message hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc); 
+}
 .message h3 {
 	font-weight: bold; 
 	color: #56458A;
 }
 .msg_content {
-	padding: 20px 20px 10px 20px;
+	padding: 15px 20px 5px 10px;
 	white-space: pre-line;
 	word-wrap: break-word;
 }
@@ -68,6 +75,23 @@ a:hover, a:focus, a:active {
 .msg_footer img {
 	vertical-align:middle;
 }
+.msg_reply {
+	padding: 0px 0px 10px 30px;
+}
+.msg_reply h4 {
+	margin-bottom: 10px; 
+}
+.msg_reply p {
+	margin: 0;
+	padding: 0;
+}
+.reply_link {
+	margin-top: 10px;
+}
+.reply_link a {
+	font-weight:normal;
+}
+
 
 /* specific Form divs */
 .write_form {
