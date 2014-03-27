@@ -17,6 +17,8 @@ Super easy guestbook, started by win, modified by masterk.
    * include basic user info: ip
 
 ### To Do List
+* Validate comments
+   * reduce comments to 4000? length
 * Reply to comments
    * display in indented format
 * Admin panel
