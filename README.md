@@ -15,13 +15,12 @@ Super easy guestbook, started by win, modified by masterk.
    * check required fields, duplicated comments
 * Write comments to MySQL database
    * include basic user info: ip
+* Write replies to database
+* Cookies enabled after submission
 
 ### To Do List
 * Validate comments
    * reduce comments to 4000(?) length
-* Reply to comments
-   * add parent field in DB
-   * display indented
 * Admin panel
    * Login, session enabled
    * Modify comments
