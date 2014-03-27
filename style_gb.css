@@ -1,0 +1,116 @@
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	}
+body { 
+	font: 80% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	margin: 0; 
+	padding: 0;
+	}
+p {
+	font: 120% georgia, sans-serif;
+	margin-top: 0; 
+	text-align: justify;
+	}
+h3 {
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: #7D775C;
+
+	clear: both;
+	}
+a:link, a:visited { 
+	font-weight: bold; 
+	text-decoration: none;
+	color: #56458A;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #9685BA;
+	}
+
+/* specific divs */
+.page-wrapper { 
+	padding: 0 175px 0 110px;  
+	margin: 0; 
+	position: relative;
+	}
+
+.intro { 
+	min-width: 470px;
+	width: 100%;
+	}
+
+.message {
+	width: 500px;
+	margin-bottom: 10px;
+	padding: 5px 50px;
+
+	border:2px solid;
+	border-radius:25px;
+}
+.message h3 {
+	font-weight: bold; 
+	color: #56458A;
+}
+.msg_content {
+	padding: 20px 20px 10px 20px;
+	white-space: pre-line;
+	word-wrap: break-word;
+}
+.msg_footer {
+	text-align: right;
+}
+.msg_footer img {
+	vertical-align:middle;
+}
+
+/* specific Form divs */
+.write_form {
+	width:500px;
+	padding-top:20px;
+	border:2px solid;
+	border-radius:25px;
+}
+.write_form p {
+	margin-left:20px;
+}
+.write_form span {
+	line-height:80px;
+	display:inline-block;
+	vertical-align:top;
+}
+
+/* header & footer */
+header h1 { 
+	margin: 5px;
+
+/*	text-indent: 100%; 	*/
+	white-space: nowrap;
+	overflow: hidden;
+	}
+header h2 { 
+	margin: 5px 5px 20px 5px;
+
+	white-space: nowrap;
+	overflow: hidden;
+	}
+header {
+	padding-top: 20px;
+}
+.footer { 
+	margin-top: 50px;
+}
+.footer h3 {
+	font-style:normal;
+}
+.footer a:link, .footer a:visited {
+	text-decoration: underline; 
+}
+.cleaner {
+	clear:both;
+}
