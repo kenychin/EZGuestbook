@@ -8,7 +8,7 @@ Super easy guestbook, started by win, modified by masterk.
 ## Program Functions
 
 * Display comments in guestbook MySQL database
-   * easy to modify the look & replacements through CSS
+   * easy to modify the look & placements through CSS
    * comments are filtered (HTML disabled) to preserve the guestbook format
 * Receive comments form submissions
 * Validate comments submitted
