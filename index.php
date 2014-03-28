@@ -1,3 +1,11 @@
+<?php
+/*
+ *	EZGuestbook - coded by Ken Chin
+ *
+ * 	LICENSE: free to use and share for all =)
+ */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
