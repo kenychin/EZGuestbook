@@ -1,8 +1,10 @@
 <?php
 /*
- *	EZGuestbook - coded by Ken Chin
+ *	EZGuestbook - coded by Ken Chin (kenychin@gmail.com)
  *
  * 	LICENSE: free to use and share for all =)
+ *
+ *
  */
 ?>
 
