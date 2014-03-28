@@ -41,3 +41,10 @@ Comment form
 
 ### write.php
 Receive, validate, and store comment
+
+
+-----
+
+## Database Setup
+
+![Database](http://master2.com/gb/guestbook_db.png)
