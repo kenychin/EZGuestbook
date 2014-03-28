@@ -1,7 +1,8 @@
 PHP-EZGuestbook (v1.5)
 ===============
 
-Super easy guestbook, started by win, modified by masterk.
+Super easy guestbook by masterk
+(original by win)
 
 -----
 
