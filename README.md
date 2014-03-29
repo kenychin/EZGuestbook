@@ -8,27 +8,22 @@ Super easy guestbook by masterk
 
 ## Program Functions
 
-* Display comments in guestbook MySQL database
-   * easy to modify the look, style & placements through CSS
-   * comments are filtered (HTML disabled) to preserve the guestbook format
-* Receive comments form submissions
-* Validate comments submitted
+* Main page: read comments from MySQL database
+   * styled through CSS (style_gb.css)
+   * comments filtered (HTML disabled)
+* Form: allows new comments and replies
    * check required fields, duplicated comments
-* Write comments to MySQL database
-   * include basic user info: ip
-* Write replies to database
-* Cookies enabled after submission
+   * include basic user info: ip, user_agent
+  * Cookies enabled after submission
+* Admin panel:
+  * Login enables session
+  * Modify comments
+  * Delete comments
 
 ### To Do List
-* Display
-  * Time am/pm
 * Validate comments
    * reduce comments to 4000(?) length
-* Admin panel
-   * Login, session enabled
-   * Modify comments
-   * Delete comments
-
+  * replies to 2000(?) length
 
 -----
 
