@@ -30,6 +30,7 @@ Super easy guestbook by masterk
 -----
 
 ## Main Programs List
+Modify db\_conn and db\_user for your program to work
 
 ### index.php
 Main page of the guestbook
@@ -40,7 +41,14 @@ Comment form
 ### write.php
 Receive, validate, and store comment
 
+### Admin.php
+Admin functions (login, delete, edit comments)
 
+### db_conn.php
+Include file containing database variables
+
+### db_user.php
+Include file containing password & function for admin.php
 -----
 
 ## Database Setup
