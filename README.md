@@ -44,7 +44,7 @@ Receive, validate, and store comment
 
 ## Database Setup
 
-![Database Example](http://master2.com/gb/guestbook_db.png)
+![Database Example](http://master2.com/gb/gb_database.png)
 
 * r_id - reference id (a reply to a specific comment)
 * del - deleted (0 or 1)
