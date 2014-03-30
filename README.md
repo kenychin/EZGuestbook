@@ -25,6 +25,7 @@ Super easy guestbook by masterk
    * reduce comments to 4000(?) length
   * replies to 2000(?) length
 * Enable img and a markup
+* Allow user to return to main page, after submission.
 
 -----
 
