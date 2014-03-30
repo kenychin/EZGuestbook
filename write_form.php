@@ -6,9 +6,7 @@
 		$heading2 = "回覆留言";
 		$submit_txt = "送出回覆";
 	};
-?>
-
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
