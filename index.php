@@ -4,17 +4,27 @@
  *
  * 	LICENSE: free to use and share for all =)
  *
- *
  */
-?>
 
-<!DOCTYPE html>
+	// 開始 Session, 檢查使用者
+	session_start();
+	if (isset($_SESSION['user']) && $_SESSION['user'] === "admin") {
+		$URL['user'] = "admin";
+	}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 
 	<title>Perl 教學 - 訪客留言版</title>
 	<link rel="stylesheet" media="screen" href="style_gb.css">
+	<script>
+		function showElement() {
+			if (document.getElementById("AdminLogin").style.display=="block")
+				document.getElementById("AdminLogin").style.display="none";
+			else document.getElementById("AdminLogin").style.display="block";
+		}
+	</script>
 </head>
 
 <body>
@@ -22,7 +32,7 @@
 	<section class="intro">
 		<header>
 			<h1>Perl 教學 - 訪客留言版</h1>
-			<h2>留言版首頁</h2>
+			<h2><a href="write_form.php">填寫留言</a></h2>
 		</header>
 	</section>
 
@@ -37,7 +47,7 @@ $result = mysql_query($query) or die('Query failed: ' . mysql_error() . "<br />\
 /***** 顯示留言 *****/
 if($result) {
 	while ($Entry = mysql_fetch_array($result)) {
-		if ($Entry['r_id']) { continue; }
+		if ($Entry['r_id'] || $Entry['del']) { continue; }
 		?>
 
 		<div class="message">
@@ -57,9 +67,16 @@ if($result) {
 			?>
 			<p class="msg_content"><?=$Entry["content"]?></p>
 			<p class="msg_footer">
-					<?php if ($Entry['email']) {
-						echo "<a href=\"mailto:{$Entry['email']}\" title=\"{$Entry['email']}\"><img src=\"email.jpg\" alt=\"{$Entry['email']}\"></a> &nbsp; {$Entry['time']}";
-					} ?>
+					<?php
+						if ($URL['user']) {
+							echo "<a href=\"admin.php?mode=edit&id={$Entry['id']}\">E</a> &nbsp; ";
+							echo "<a href=\"admin.php?mode=del&id={$Entry['id']}\">D</a> &nbsp; ";
+						}
+						if ($Entry['email'])
+							echo "<a href=\"mailto:{$Entry['email']}\" title=\"{$Entry['email']}\"><img src=\"email.png\" alt=\"{$Entry['email']}\"></a> &nbsp;";
+						$Entry['time'] = date('Y-m-d H:i', strtotime($Entry['time']));
+						echo $Entry['time'];
+					?>
 			</p>
 
 			<?php
@@ -67,15 +84,29 @@ if($result) {
 				$query = "SELECT * FROM messages WHERE r_id = {$Entry['id']}";
 				$result_r = mysql_query($query) or die('Query failed: ' . mysql_error() . "<br />\n$query");
 				if($result_r) {
-					while ($Entry_R = mysql_fetch_array($result_r)) { ?>
+					while ($Entry_R = mysql_fetch_array($result_r)) {
+						if ($Entry_R['del']) continue; ?>
 						<hr>
 						<div class="msg_reply">
-						<h4><?=$Entry_R['name']?></h4>
-						<p><?=$Entry_R['content']?></p>
-						<p class="msg_footer">
-						<?php if ($Entry_R['email']) {
-							echo "<a href=\"mailto:{$Entry_R['email']}\" title=\"{$Entry_R['email']}\"><img src=\"email.jpg\" alt=\"{$Entry_R['email']}\"></a> &nbsp; {$Entry_R['time']}";
+						<?php if ($Entry_R['url']) {
+							if (strpos($Entry_R['url'], 'http://') === false) {
+								$Entry_R['url'] = "http://{$Entry_R['url']}";
+							}
+							$Entry_R['name'] = "<a href=\"{$Entry_R['url']}\">{$Entry_R['name']}</a>";
 						} ?>
+						<h4><?=$Entry_R['name']?></h4>
+						<p class="msg_content"><?=$Entry_R['content']?></p>
+						<p class="msg_footer">
+						<?php
+							if ($URL['user']) {
+								echo "<a href=\"admin.php?mode=edit&id={$Entry_R['id']}\">E</a> &nbsp; ";
+								echo "<a href=\"admin.php?mode=del&id={$Entry_R['id']}\">D</a> &nbsp; ";
+							}
+							if ($Entry_R['email'])
+								echo "<a href=\"mailto:{$Entry_R['email']}\" title=\"{$Entry_R['email']}\"><img src=\"email.png\" alt=\"{$Entry_R['email']}\"></a> &nbsp;";
+							$Entry_R['time'] = date('Y-m-d H:i', strtotime($Entry_R['time']));
+							echo $Entry_R['time'];
+						?>
 						</p>
 						</div><?php
 					}
@@ -90,9 +121,31 @@ if($result) {
 }
 ?>
 
+        <div id="AdminText" onClick="showElement();"><p class="center">admin</p></div>
+		<div id="AdminLogin" class="hidden">
+			<?php if (!isset($_SESSION['user'])) { ?>
+				<form action="admin.php?mode=login" method="post">
+				<input type="password" name="pass" size=10>
+				<input type="submit" value="login">
+				</form> <?php }
+			else { ?>
+				<a href="admin.php?mode=logoff">Logoff</a>
+			<?php } ?>
+		</div>
 		<div class="footer">
-			<h3><a href="write_form.php">填寫留言</a></h3><br>
-			<p><a href="/teach/perl.shtml">回到Perl教學</a><br><br><a href="http://master2.com">Master2.com</a></p>
+			<p><a href="/teach/perl.shtml">回到Perl教學</a><br><br>
+			<a href="http://master2.com">Master2.com</a></p>
+
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Footer -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:468px;height:15px"
+				 data-ad-client="ca-pub-4473834210007622"
+				 data-ad-slot="2531147599"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+
 		</div>
 	</div>
 </div>
