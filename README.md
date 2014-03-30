@@ -44,6 +44,8 @@ Receive, validate, and store comment
 
 ## Database Setup
 
+![Database Example](http://master2.com/gb/guestbook_db.png)
+
 * r_id - reference id (a reply to a specific comment)
 * del - deleted (0 or 1)
 * env - provides additional space to add user env variables, and admin comments
